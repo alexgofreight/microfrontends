@@ -5,7 +5,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     // path: './dist' >>   Need abs path
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './dist'),
+    // publicPath: 'https://som-cdn/'
+    publicPath: 'dist/'
   },
   mode: 'none',
   module: {
