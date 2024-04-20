@@ -1,0 +1,15 @@
+import './hello-button.css'
+
+class HelloButton {
+  render() {
+    const btn = document.createElement('button')
+    btn.innerHTML = 'Hello !!'
+    btn.classList.add('hello-button')
+    btn.onclick = function() {
+      console.log('click!')
+    }
+    document.querySelector('body').appendChild(btn)
+  }
+}
+
+export default HelloButton
