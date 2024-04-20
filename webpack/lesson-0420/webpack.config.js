@@ -20,6 +20,9 @@ module.exports = {
             maxSize: 5* 1024  // 5kb
           }
         }
+      }, {
+        test: /\.(txt)$/,
+        type: 'asset/source',
       }
     ]
   }

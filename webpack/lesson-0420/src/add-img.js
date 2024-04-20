@@ -1,9 +1,11 @@
 import ball from './img/ball.jpg'
 import circle from './img/circle.svg'
+import altInfo from './txt/alt.txt'
 
 function addImage() {
   const elem = document.createElement('img');
   elem.src = ball;
+  elem.alt = altInfo;
   elem.width = '300'
   document.querySelector('body').appendChild(elem)
 
