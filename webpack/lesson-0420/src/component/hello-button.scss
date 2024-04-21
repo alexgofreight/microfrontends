@@ -1,0 +1,9 @@
+$bg-color: black;
+$text-color: white;
+
+.hello-button {
+  background: $bg-color;
+  color: $text-color;
+  font-size: 16px;
+  padding: 5px;
+}

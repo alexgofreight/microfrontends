@@ -1,10 +1,11 @@
-import './hello-button.css'
+import './hello-button.scss'
 
 class HelloButton {
+  buttonClass = 'hello-button'
   render() {
     const btn = document.createElement('button')
     btn.innerHTML = 'Hello !!'
-    btn.classList.add('hello-button')
+    btn.classList.add(this.buttonClass)
     btn.onclick = function() {
       console.log('click!')
     }
