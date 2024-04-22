@@ -24,23 +24,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app_b',
-      library: {
-        type: 'var',
-        name: 'app_b',
-      },
+      name: 'app2',
+      filename: 'app2Entry.js',
       exposes: {
-        './Button': './src/components/Button',
-      },
-      shared: {
-        ...deps,
-        react: {
-          eager: true,
-        },
-        'react-dom': {
-          eager: true,
-        },
-      },
+        './Button': './src/components/Button'
+      }
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',

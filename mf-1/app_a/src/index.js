@@ -18,7 +18,7 @@ const styles = {
   }
 }
 
-const Button = React.lazy(()=>import('app_b/Button'))
+const Button = React.lazy(()=>import('app2/Button'))
 
 const App = () => (
   <div>

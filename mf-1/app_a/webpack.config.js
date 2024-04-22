@@ -24,22 +24,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app_a',
-      library: {
-        type: 'var',
-        name: 'app_a',
-      },
+      name: 'app1',
+      filename: 'app1Entry.js',
       remotes: {
-        app_b: 'app_b',
-      },
-      shared: {
-        ...deps,
-        react: {
-          eager: true,
-        },
-        'react-dom': {
-          eager: true,
-        },
+        app2: 'app2@http://localhost:3001/app2Entry.js',
       },
     }),
     new HtmlWebpackPlugin({
