@@ -18,7 +18,7 @@ const styles = {
   }
 }
 
-const Button = React.lazy(()=>import('app2/Button'))
+const Buttonx = React.lazy(()=>import('app2/Buttonx'))
 
 const App = () => (
   <div>
@@ -28,7 +28,7 @@ const App = () => (
         It's App A's bg
       </div>
       <div style={styles.bodyRight}>
-        <Button>The Button from app_b</Button>
+        <Buttonx>The Button from app_b</Buttonx>
       </div>
     </div>
   </div>

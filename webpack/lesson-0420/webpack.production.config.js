@@ -13,7 +13,7 @@ module.exports = {
     publicPath: '',
     clean: true
   },
-  mode: 'none',
+  mode: 'production',
   module: {
     rules: [
       {

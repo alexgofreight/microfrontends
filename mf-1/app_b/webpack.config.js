@@ -27,7 +27,7 @@ module.exports = {
       name: 'app2',
       filename: 'app2Entry.js',
       exposes: {
-        './Button': './src/components/Button'
+        './Buttonx': './src/components/Buttonx'
       }
     }),
     new HtmlWebpackPlugin({
