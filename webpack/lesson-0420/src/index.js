@@ -12,4 +12,3 @@ header.render()
 helloBtn.render()
 
 console.log(process.env.NODE_ENV)
-helloBtn.triggerError()
