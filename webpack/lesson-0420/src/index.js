@@ -8,7 +8,7 @@ addImage();
 
 const header = new Header()
 const helloBtn = new HelloButton()
-header.render()
+header.render('hello')
 helloBtn.render()
 
 console.log(process.env.NODE_ENV)

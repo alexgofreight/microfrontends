@@ -17,6 +17,11 @@ module.exports = {
     clean: true
   },
   mode: 'production',
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   module: {
     rules: [
       {
