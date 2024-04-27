@@ -4,9 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'hello': './src/index.js',
+    'kiwi': '/src/kiwi.js'
+  },
   output: {
-    filename: 'bundle.[contenthash].js',
+    filename: '[name].[contenthash].js',
     // path: './dist' >>   Need abs path
     path: path.resolve(__dirname, './dist'),
     // publicPath: 'https://som-cdn/'
@@ -53,13 +56,24 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.[contenthash].css'
+      filename: '[name].[contenthash].css'
     }),
     new HtmlWebpackPlugin({
-      title: 'Hello World',
-      template: 'src/index.hbs',
-      description: 'Yo Yo Yo',
-    })
+      filename: 'hello.html',
+      chunks: ['hello'],
+      title: 'hello',
+      template: 'src/page-template.hbs',
+      description: 'hello',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'kiwi.html',
+      chunks: ['kiwi'],
+      title: 'kiwi',
+      template: 'src/page-template.hbs',
+      description: 'kiwi',
+      minify: false
+    }),
     // new CleanWebpackPlugin()
   ]
   // module: {
